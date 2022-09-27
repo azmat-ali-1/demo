@@ -1,0 +1,33 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+public class Main
+{
+  
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+      String str = sc.nextLine();
+      String [] tim = str.split(":");
+      String str1=tim[0];
+      String str2=tim[1];
+      String str3=tim[2];
+      String str4 = str3.substring(2);
+      String str5 = str3.substring(0,2);
+      int num = Integer.parseInt(str1); 
+      if(str4.equals("AM")){
+        if(num==12){num=0;}
+      }
+         if(str4.equals("PM")){
+           if(num<12){
+             num=num+12;
+           }
+         }
+      if(num<12){
+      System.out.println("0"+num+":"+str2+":"+str5);}
+      else{ System.out.println(num+":"+str2+":"+str5);}
+      
+   
+	}
+}
